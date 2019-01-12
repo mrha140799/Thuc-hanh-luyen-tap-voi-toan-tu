@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeGym</title>
+</head>
+<body>
+
+<form name="formInput">
+    Login : <input type="text" name="txtInput">
+</form><br>
+<button type="button" onclick="ShowMess();">Xác Nhận</button>
+<h1 id="idMess"></h1>
+<script>
+    function ShowMess() {
+        var login = document.formInput.txtInput.value;
+        var Mess = (login == "Employee") ? "Hello" :  (login == "Director") ? "Greetings" : (login == "") ? "No login" : "" ;
+        var ht = document.getElementById("idMess");
+        ht.innerText = Mess ;
+    }
+</script>
+</body>
+</html>
